@@ -1,0 +1,201 @@
+body { 
+    background-color: #000000; 
+    background-color: RGBA(0, 0, 0, 0); 
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+/*This class defines the base attributes of the skin*/
+.controller.custom{
+    background: url(https://i.imgur.com/CYRynAT.png);
+    width: 830px;
+    height: 631px;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* Analog sticks follow the same principles as the triggers in terms of positioning
+Note that the rotation of the sticks in hard coded with javascript, so it applies 
+the CSS inline. */
+.custom .sticks{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 240px;
+    top: 308px;
+}
+.custom .stick{
+    position: absolute;
+    background: url(https://i.imgur.com/CVRn6CX.png);
+    height: 100px;
+    width: 100px;
+}
+.custom .stick.pressed.left{
+    background-position-x: -102px;
+}
+.custom .stick.pressed.right{
+    background-position-x: -102px;
+}
+.custom .stick.right{
+    left: calc(100% + 150px);
+}
+
+/* This is to size and position the containing div for the 
+start and select buttons. */
+.custom .arrows{
+    position: absolute;
+    width: 418px;
+    height: 0px;
+    top: 127px;
+    left: 206px;
+}
+/* Setting the size and CSS sprite for the start adn select buttons */
+.custom .back, .custom .start{
+    background: url(https://i.imgur.com/C1YPtca.png);
+    width: 24px;
+    height: 40px;
+}
+.custom .back.pressed, .custom .start.pressed{
+    background-position-y: 40px;
+    margin-top: -2px;
+}
+.custom .back{
+    float: left;
+    width: 24px;
+}
+.custom .start{
+    float: right;
+    width: 24px;
+    background-position: 24px 0;
+}
+
+/* Dpad possitioning and sizing */
+.custom .dpad {
+    position: absolute;
+    width: 140px;
+    height: 132px;
+    top: 142px;
+    left: 75px;
+}
+.custom .face{
+    background: url(https://i.imgur.com/xHzP6yc.png);
+    position: absolute;
+}
+.custom .face.up, .custom .face.down{
+    width: 50px;
+    height: 64px;
+}
+.custom .face.left, .custom .face.right{
+    width: 66px;
+    height: 50px;
+}
+.custom .face.up{
+    left: 50px;
+    top: 0;
+    background-position: 0px 0px;
+}
+.custom .face.down{
+    left: 50px;
+    top: 85px;
+    background-position: 182px 0;
+}
+.custom .face.left{
+    top: 50px;
+    left: -2px;
+    background-position: -103px 0;
+}
+.custom .face.right{
+    top: 50px;
+    right: -9px;
+    background-position: 66px 0;
+}
+.custom .face.pressed{
+    margin-top: -1px;
+    background-position-y: 64px;
+}
+
+/* Positioning and size of the container for the face buttons */
+.custom .abxy{
+    position: absolute;
+    width: 204px;
+    height: 205px;
+    top: 137px;
+    left: 592px;
+}
+/* base class used to simplify the sprite mapping */
+.custom .button{
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background: url(https://i.imgur.com/bpt0MPg.png);
+}
+.custom .button.pressed{
+    background-position-y: -56px;
+    margin-top: 0px;
+}
+.custom .a{
+    background-position: 0px 0;
+    top: 121px;
+    left: 61px;
+}
+.custom .b{
+    background-position: 166px 0;
+    top: 60px;
+    right: 29px;
+}
+.custom .x{
+    background-position: 110px 0;
+    top: 60px;
+}
+.custom .y{
+    background-position: 54px 0;
+    left: 61px;
+}
+
+/* The bumpers follow the same methodology as the triggers in terms of
+placement */
+.custom .bumper{
+    width: 81px;
+    height: 32px;
+    background: url(https://i.imgur.com/JocHHed.png);
+    opacity: 0;
+}
+.custom .bumpers{
+    position: absolute;
+    width: 601px;
+    height: 28px;
+    left: 114px;
+    top: 78px;
+}
+.custom .bumper.pressed{
+    opacity: 1;
+}
+.custom .bumper.left{
+    float: left;
+}
+.custom .bumper.right{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    float: right;
+}
+
+.custom .triggers{
+    position: absolute;
+    width: 601px;
+    height: 65px;
+    left: 115px;
+}
+.custom .trigger{
+    background: url(https://i.imgur.com/k8PnZZG.png);
+    width:84px;
+    height:73px;
+    opacity: 0;
+}
+.custom .trigger.right {
+    background-position: 84px 0;
+}
+.custom .trigger.left{ 
+    float: left;
+}
+.custom .trigger.right{
+    float: right;
+}
